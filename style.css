@@ -1,0 +1,159 @@
+html {
+	height: 100%;
+}
+body {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-weight: 300;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	background: #000;
+	color: #ccc;
+}
+
+@-webkit-keyframes opacity {
+	0% { opacity: 0 }
+	100% { opacity: 100% }
+}
+
+@-webkit-keyframes bg {
+	0% {
+		background-size: auto 500px;
+	}
+	100% {
+		background-size: auto 700px;
+	}
+}
+
+::-moz-selection {
+	background: #fff;
+	color: #000;
+	text-shadow: none;
+}
+::selection {
+	background: #fff;
+	color: #000;
+	text-shadow: none;
+}
+
+* {
+	-webkit-backface-visibility: hidden;
+   	backface-visibility: hidden;
+}
+
+h1 {
+	margin-bottom: 0;
+	font-size: 2.1em;
+	text-shadow: rgba(0,0,0,1) 0 1px 5px,
+				 rgba(0,0,0,1) 0 3px 15px,
+				 rgba(0,0,0,1) 0 5px 20px;
+}
+
+h2 {
+	margin-top: .2em;
+	font-weight: 300;
+	color: #fff;
+	text-shadow: rgba(0,0,0,1) 0 1px 5px,
+				 rgba(0,0,0,1) 0 3px 15px,
+				 rgba(0,0,0,1) 0 5px 20px;
+}
+
+h2 span {
+	color: #ccc;
+}
+
+.bg {
+	position: absolute;
+	z-index: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: #000 url(images/bg.jpg) no-repeat 125% 105%;
+	background-size: auto 700px;
+	-webkit-animation: bg 20s linear, opacity 20s;
+	animation: bg 20s linear, opacity 20s;
+}
+
+.wrapper {
+	position: absolute;
+	z-index: 1;
+	top: 2em;
+	right: 0;
+	bottom: 2em;
+	left: 0;
+	height: 500px;
+	max-width: 450px;
+	margin: auto;
+	-webkit-backface-visibility: hidden;
+   	backface-visibility: hidden;
+	-webkit-animation: opacity 3s;
+	animation: opacity 3s;
+}
+
+.intro {
+	color: #ccc;
+	margin: 2em -1em;
+	padding: 2em 1em;
+	line-height: 1.5em;
+	border-top: 1px solid #444;
+	border-bottom: 1px solid #444;
+	border-top: 1px solid rgba(255,255,255,.3);
+	border-bottom: 1px solid rgba(255,255,255,.3);
+	text-shadow: rgba(0,0,0,1) 0 1px 5px,
+				 rgba(0,0,0,1) 0 3px 15px,
+				 rgba(0,0,0,1) 0 5px 20px;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:visited { color: #aaa; }
+
+.pdf-link {
+	float: left;
+	width: 50%;
+	text-align: left;
+}
+
+.pdf-link a {
+	display: inline-block;
+	padding: 1em 2em;
+	border: 2px solid #fff;
+	color: #fff;
+}
+
+.copyrights {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: 2em;
+	font-size: .8em;
+	color: #999;
+}
+
+@media (max-width: 640px) {
+	.wrapper {
+		position: relative;
+		top: auto;
+		padding: 6em 2em;
+		width: 100%;
+		height: auto;
+		min-height: 400px;
+	}
+
+	.bg {
+		top: auto;
+		bottom: 0;
+		height: 500px;
+		background-size: auto 500px;
+		background-position: 50% 100%
+	}
+
+	.copyrights {
+		position: relative;
+		text-align: center;
+		color: #ccc;
+	}
+}
